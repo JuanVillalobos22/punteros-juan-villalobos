@@ -1,0 +1,25 @@
+// EJERCICIO 01 - FORMA ITERATIVA
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+int suma(int *num)
+{
+	int sum=0;
+	for(int i=0;i<5;i++){
+		sum=sum+*(num+i);
+	}
+	return sum;
+}
+
+
+
+int main(){
+	int num[]={1,2,3,4,5};
+	cout<<"La suma de los elementos es: "<<suma(num)<<endl;
+	
+	getch();
+	return 0;
+}
+

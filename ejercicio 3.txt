@@ -1,0 +1,30 @@
+// EJERCICIO 03
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+void orden(int tam,int *num){
+	int aux;
+	for (int i = 0;i < tam; i++){
+		for (int j = 0; j< tam-1; j++){
+			if (*(num+j) < *(num+(j+1))){ 
+				aux = *(num+j); 
+				*(num+j) = *(num+(j+1)); 
+				*(num+(j+1))= aux;
+			}
+		}
+	}
+}
+
+
+int main(){
+	int num[5] = {3,2,1,4,5}; 
+	int tam=5;
+	cout<<"orden ascendente: "<<endl;
+	orden(tam,num);	
+	for (int i = tam-1; i >= 0; i--) 
+		cout << *(num+i)<< endl;
+	return 0;
+}

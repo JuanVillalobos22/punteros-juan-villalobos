@@ -1,0 +1,18 @@
+//EJERCICIO 04 - FORMA ITERATIVA
+
+#include<iostream>
+using namespace std;
+int tamanio(char *);
+int main(){
+	char *num=new char[50];
+	cout<<"Ingrese una cadena: ";
+	cin.getline(num,50);
+	cout<<tamanio(num)<<endl;
+	return 0;
+}
+int tamanio(char *cad){
+	int cont=0;
+	while(*cad++)
+	    cont++;
+	return cont;
+}

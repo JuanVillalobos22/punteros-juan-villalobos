@@ -1,0 +1,23 @@
+//EJERCICIO 04 - FORMA RECURSIVA
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+int tamanio(char *num,int x){
+	if(*(num+x)=='\0')
+		return 0;
+	else
+		return (1+tamanio(num,++x));
+}
+
+int main(){
+	char num[] = "hola";
+	int x= 0;
+	tamanio(num, x);
+	cout<<"el tamanio es:  "<<tamanio(num, x);
+	return 0;
+}

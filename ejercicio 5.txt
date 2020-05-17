@@ -1,0 +1,26 @@
+// EJERCICIO 05
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+void conca(char *frase, char *frase2){
+    int j=0;
+    int i=0;
+    for (i=0; *(frase2+i)!='\0'; i++);{
+  	  while (*(frase+j)!='\0'){
+    	    *(frase2+i)=*(frase+j);
+     	   j++;
+      	  i++;
+    }
+    cout<<frase2;
+}
+}
+int main(){
+	char frase[]=" juan ",frase2[]=" hola ";
+	conca(frase,frase2);
+
+	return 0;
+}

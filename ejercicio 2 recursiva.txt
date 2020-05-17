@@ -1,0 +1,31 @@
+//ejercicio 02 - forma recursiva
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int inver(int *num,int tam,int mitad,int inversa){
+	int aux;
+	if(tam==0)
+		return *(num+0);
+	else{
+		if(tam>mitad){
+			aux=*(num+tam-1);
+			*(num+tam-1)=*(num+inversa);
+			*(num+inversa++)=aux;
+			inver(num,tam-1,(tam+1)/2,inversa);
+		}
+		else 
+			return *(num+0);
+	}
+}
+int main(){
+	int inversa=0;
+	int num[5] = {1,2,3,4,5}; 
+	int tam=5;
+	int mitad =tam/2,*p=num;
+	cout<<"orden inverso: "<<endl;
+	inver(p,tam,mitad,inversa);
+	for(int j=0;j<tam;j++)
+    	cout<<*(p+j)<<" ";
+	return 0;
+}

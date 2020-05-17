@@ -1,0 +1,25 @@
+// EJERCICIO 01 - FORMA RECURSIVA
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int sumre( int *num, int tam)
+{
+	if(tam==1){
+		return *(num+0);
+	}
+	else 
+		return *(num+tam-1)+sumre(num,tam-1);
+}
+
+int main(){
+	int num[]={1,2,3,4,5} ;
+	int tam=5;
+	cout<<"la suma de los elementos es: "<<sumre(num,tam)<<endl;
+	
+	
+	return 0;
+}
+
